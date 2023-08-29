@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_ui_banner_images",
+  "info": {
+    "displayName": "bannerImage"
+  },
+  "options": {},
+  "attributes": {
+    "url": {
+      "type": "string"
+    },
+    "image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "active": {
+      "type": "boolean"
+    }
+  }
+}

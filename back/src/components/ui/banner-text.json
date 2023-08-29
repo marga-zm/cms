@@ -1,0 +1,34 @@
+{
+  "collectionName": "components_ui_banner_texts",
+  "info": {
+    "displayName": "bannerText"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "url": {
+      "type": "string",
+      "required": false
+    },
+    "image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "content": {
+      "type": "richtext"
+    },
+    "active": {
+      "type": "boolean",
+      "required": true
+    }
+  }
+}

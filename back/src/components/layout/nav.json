@@ -1,0 +1,12 @@
+{
+  "collectionName": "components_layout_navs",
+  "info": {
+    "displayName": "nav"
+  },
+  "options": {},
+  "attributes": {
+    "item": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "root": true,
+  "parser": "vue-eslint-parser",
+  "env": {
+    "node": true,
+    "browser": true,
+    "jest": true
+  },
+  "ignorePatterns": ["node_modules/*"],
+  "parserOptions": {
+    "parser": "@typescript-eslint/parser",
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 2020
+  },
+  "globals": {
+    "$nuxt": true
+  },
+  "extends": [
+    "plugin:@typescript-eslint/recommended",
+    "plugin:vue/recommended",
+    "prettier"
+  ],
+  "plugins": ["jest", "prettier"],
+  "rules": {
+    "vue/component-name-in-template-casing": ["error", "PascalCase"],
+    "@typescript-eslint/ban-ts-comment": "off",
+    "@typescript-eslint/no-empty-interface": "off",
+    "vue/multi-word-component-names": "off",
+    "@typescript-eslint/no-unused-vars": "off",
+    "@typescript-eslint/no-var-requires": "off",
+    "@typescript-eslint/no-explicit-any": "off",
+    "@typescript-eslint/no-inferrable-types": "off",
+    "vue/max-attributes-per-line": "off",
+    "no-empty-function": "off",
+    "@typescript-eslint/no-empty-function": "off",
+    "vue/no-unused-vars": "error",
+    "prettier/prettier": [
+      "error",
+      {
+        "endOfLine": "auto"
+      }
+    ] 
+  }
+}

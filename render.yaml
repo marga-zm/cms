@@ -4,7 +4,7 @@ services:
     env: node
     plan: starter
     buildCommand: cd back/strapi && yarn install && yarn build
-    startCommand: cd back/strapi && rsync -a public/ data/public/ && yarn start
+    startCommand: cd back/strapi && rsync -a back/public/ back/data/public/ && yarn start
     healthCheckPath: /_health
     autoDeploy: false
     disk:
@@ -17,7 +17,7 @@ services:
       - key: NODE_ENV
         value: production
       - key: DATABASE_FILENAME
-        value: /data/strapi.db
+        value: back/data/strapi.db
       - key: JWT_SECRET
         generateValue: true
       - key: ADMIN_JWT_SECRET

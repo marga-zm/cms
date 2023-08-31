@@ -1,6 +1,6 @@
 <template>
   <BaseLayout>
-    <div class="p-4 lg:px-32 mx-auto">
+    <div v-if="articleHtml" class="p-4 lg:px-32 mx-auto">
       <div class="grid grid-cols-1 lg:grid-cols-[60%_40%] gap-2 mt-12">
         <div>
           <figure>
@@ -88,9 +88,7 @@ export default defineComponent({
     const getInitialDataArticle = async () => {
       try {
         const {
-          data: {
-            _rawValue: { data },
-          },
+          data: { data },
         } = await $services.customer.filterArticleBySlug(slug);
 
         dataArticle.value = data;
@@ -98,10 +96,9 @@ export default defineComponent({
           extensions: [gfm({ syntax: true })],
         });
         articleImage.value = data?.attributes.image.data.attributes;
-        console.log(data?.attributes.image);
         relatedArticles.value = {
-          title: data.attributes.relatedArticles.title,
-          articles: data.attributes.relatedArticles.articles.data,
+          title: data.attributes.relatedArticles?.title,
+          articles: data.attributes.relatedArticles?.articles?.data,
         };
       } catch (error) {
         console.log(error);
@@ -123,7 +120,10 @@ export default defineComponent({
     const applyStylesToSubtitle = () => {
       const wraper = document.getElementById("contentWrapper");
       if (wraper) {
-        const elements = wraper.querySelectorAll("h2");
+        const elements = [
+          ...wraper.querySelectorAll("h2"),
+          ...wraper.querySelectorAll("h3"),
+        ];
         elements.forEach((element) => {
           element.style.fontSize = "20px";
           element.style.fontWeight = "bold";

@@ -39,9 +39,7 @@ export default defineComponent({
       try {
         const {
           data: {
-            _rawValue: {
-              data: { attributes },
-            },
+            data: { attributes },
           },
         } = await $services.customer.getHomePage();
         dataHomePage.value = attributes;

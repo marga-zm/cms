@@ -10,7 +10,7 @@
         <km-calculator v-if="dataBlogPage.showCalculator" />
       </div>
       <div class="mt-8 flex justify-center items-center">
-        <div>
+        <div v-if="articles.length">
           <h2 class="text-xl font-bold text-center mb-4">Lista de blogs</h2>
           <div class="flex flex-wrap justify-center gap-2 md:gap-4">
             <div v-for="{ id, attributes } in articles" :key="id">
@@ -82,7 +82,6 @@ export default defineComponent({
   setup() {
     const { $services } = useNuxtApp();
     const router = useRouter();
-    const runtimeConfig = useRuntimeConfig();
 
     const articles = ref([]);
     const dataBlogPage = ref({});
@@ -93,11 +92,10 @@ export default defineComponent({
     const getArticles = async () => {
       try {
         const {
-          data: {
-            _rawValue: { data },
-          },
+          data: { data },
         } = await $services.customer.getArticles();
         articles.value = data;
+        console.log(articles.value);
       } catch (error) {
         console.log(error);
       }
@@ -107,9 +105,7 @@ export default defineComponent({
       try {
         const {
           data: {
-            _rawValue: {
-              data: { attributes },
-            },
+            data: { attributes },
           },
         } = await $services.customer.getBlogPage();
         dataBlogPage.value = attributes;
@@ -141,6 +137,7 @@ export default defineComponent({
     };
 
     const getImageUrl = (attributes) => {
+      console.log(attributes);
       return attributes.image.data.attributes.url;
     };
 

@@ -113,9 +113,9 @@ const getVariantStyles = computed(() => {
 });
 const getRoundedStyles = computed(() => {
   return {
-    small: "rounded-b-md lg:rounded-md",
-    medium: "rounded-b-xl lg:rounded-xl",
-    large: "rounded-b-3xl lg:rounded-3xl",
+    small: "rounded-md",
+    medium: "rounded-xl",
+    large: "rounded-3xl",
   }[props.rounded];
 });
 const getCustomStyles = computed(() => {

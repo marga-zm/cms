@@ -1,5 +1,4 @@
 const plugin = require("tailwindcss/plugin");
-const { theme } = require("@kambista/ui/theme");
 
 module.exports = {
   enabled: process.env.NODE_ENV === "production",
@@ -14,9 +13,7 @@ module.exports = {
   ],
   theme: {
     extend: {
-      ...theme,
       colors: {
-        ...theme.colors,
         brand: {
           lighter: "#dee7ef",
         },
@@ -27,7 +24,6 @@ module.exports = {
         2.5: 2.5,
       },
       boxShadow: {
-        ...theme.boxShadow,
         xs: "0 0 0 1px rgba(0, 0, 0, 0.05)",
       },
       backgroundImage: () => ({

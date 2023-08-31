@@ -1,7 +1,7 @@
 <template>
   <BaseLayout>
     <div v-if="titleHtml" class="px-4">
-      <div class="flex justify-evenly items-center">
+      <div class="flex flex-col lg:flex-row justify-evenly items-center">
         <div
           v-html="titleHtml"
           id="contentWrapper"

@@ -32,15 +32,6 @@
         }
       }
     },
-    "slug": {
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "type": "string",
-      "required": true
-    },
     "content": {
       "pluginOptions": {
         "i18n": {
@@ -82,14 +73,6 @@
       },
       "component": "shared.seo"
     },
-    "title": {
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "type": "richtext"
-    },
     "relatedArticles": {
       "type": "component",
       "repeatable": false,
@@ -99,6 +82,24 @@
         }
       },
       "component": "related-data.related-articles"
+    },
+    "title": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string",
+      "required": true
+    },
+    "slug": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "uid",
+      "targetField": "title"
     }
   }
 }

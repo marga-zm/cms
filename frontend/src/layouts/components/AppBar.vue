@@ -8,7 +8,15 @@
       class="cursor-pointer w-56"
       @click="handleRedirect"
     />
-    <div>
+    <div class="lg:hidden">
+      <slot name="nav">
+        <LeftIcon class="w-12 h-12 cursor-pointer p-1.5" @click="onMenu" />
+        <template v-if="menu">
+          <Nav :on-menu="onMenu" />
+        </template>
+      </slot>
+    </div>
+    <div class="hidden lg:block">
       <NuxtLink
         to="/nosotros"
         class="text-gray-100 text-2xl px-4 py-3 hover:font-semibold"
@@ -34,7 +42,18 @@
 </template>
 
 <script setup>
+import Nav from "~/layouts/components/Nav.vue";
+import LeftIcon from "~/assets/icons/LeftIcon.vue";
+
+import { onMounted, ref, watch } from "vue";
+
 const router = useRouter();
+
+let menu = ref(false);
+
+const onMenu = () => {
+  menu.value = !menu.value;
+};
 
 const handleRedirect = (path) => {
   router.push({ path: `/` });

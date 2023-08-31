@@ -1,6 +1,6 @@
 <template>
   <BaseLayout>
-    <div class="px-4">
+    <div v-if="titleHtml" class="px-4">
       <div class="flex justify-evenly items-center">
         <div
           v-html="titleHtml"
@@ -95,7 +95,6 @@ export default defineComponent({
           data: { data },
         } = await $services.customer.getArticles();
         articles.value = data;
-        console.log(articles.value);
       } catch (error) {
         console.log(error);
       }
@@ -131,7 +130,7 @@ export default defineComponent({
       const wraper = document.getElementById("contentWrapper");
       if (wraper) {
         const element = wraper.querySelector("h1");
-        element.style.fontSize = "40px";
+        element.style.fontSize = "36px";
         element.style.textAlign = "center";
       }
     };

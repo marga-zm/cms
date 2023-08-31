@@ -1,11 +1,11 @@
 <template>
   <div
-    class="bg-black flex items-center justify-between px-16 text-secondary relative p-6"
+    class="bg-black flex items-center justify-between px-16 text-secondary relative p-4 lg:p-6"
   >
     <img
       src="~/assets/images/logo.svg"
       alt="Kambista logo"
-      class="cursor-pointer w-56"
+      class="cursor-pointer w-48 lg:w-56"
       @click="handleRedirect"
     />
     <div class="lg:hidden">

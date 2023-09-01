@@ -137,7 +137,7 @@ export default defineComponent({
       if (wraper) {
         const elements = wraper.querySelectorAll("p");
         elements.forEach((element) => {
-          element.style.margin = "4px 0px 4px 0px";
+          element.style.margin = "8px 0px 8px 0px";
         });
       }
     };

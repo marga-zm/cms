@@ -11,7 +11,7 @@ interface Article {
 const getInitialDataBlog = async () => {
   try {
     const response = await fetch(
-      "http://localhost:1337/api/articles?populate=*",
+      "https://kambista.onrender.com/api/articles?populate=*",
     );
     if (!response.ok) {
       throw new Error("Error");
@@ -37,6 +37,7 @@ export default cachedEventHandler(
     }));
 
     const articles = await getInitialDataBlog();
+    console.log(articles);
 
     const blogTags = articles.map((article: Article) => ({
       loc: `${article.attributes.tag.toLowerCase()}`,

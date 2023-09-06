@@ -26,12 +26,12 @@ export default defineComponent({
         name: item.text,
       },
     }));
-    const questions = this.seo?.question?.map((item) => ({
+    const questions = this.seo?.structuredData.questions?.map((item) => ({
       "@type": "Question",
       name: item.question,
       acceptedAnswer: {
         "@type": "Answer",
-        text: article.acceptedAnswer,
+        text: item.answer,
       },
     }));
     return {

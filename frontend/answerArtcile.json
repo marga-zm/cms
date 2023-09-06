@@ -1,0 +1,38 @@
+{
+  "@context": "https://schema.org",
+  "type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Cuales herramientas digitales puedo usar en mi emprendimiento?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "LHoy en día puedes encontrar muchas aplicaciones orientadas al mundo empresarial; sin embargo, saber cuál es la ideal para ti y tu negocio puede ser todo un reto. Algunas te pueden ayudar a mejorar tu productividad y la de tu organización, como por ejemplo Slack, Trello y Kambista."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cómo protegerme del Pishing? ",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "1. Verifica la legitimidad de los remitentes \r\n2. No compartas información personal o financiera\r\n3. Utiliza autenticación de dos factores (2FA)\r\n4. Mantén tus dispositivos y software actualizados"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿De qué sirven los antiwalmare?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Las herramientas antimalware detectan, bloquean y eliminan diferentes tipos de malware, como virus, troyanos, ransomware, spyware y adware. Escanean tu dispositivo en busca de amenazas y te alertan si encuentran algo sospechoso. También pueden ofrecer protección en tiempo real para prevenir infecciones"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿De qué sirven los antiwalmare?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Las herramientas antimalware detectan, bloquean y eliminan diferentes tipos de malware, como virus, troyanos, ransomware, spyware y adware. Escanean tu dispositivo en busca de amenazas y te alertan si encuentran algo sospechoso. También pueden ofrecer protección en tiempo real para prevenir infecciones"
+      }
+    }
+  ]
+}

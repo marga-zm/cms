@@ -1,0 +1,87 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://kambista.com/casa-de-cambio/",
+      "url": "https://kambista.com/casa-de-cambio/",
+      "name": "Nosotros - Kambista",
+      "isPartOf": { "@id": "https://kambista.com/#website" },
+      "primaryImageOfPage": {
+        "@id": "https://kambista.com/casa-de-cambio/#primaryimage"
+      },
+      "image": { "@id": "https://kambista.com/casa-de-cambio/#primaryimage" },
+      "thumbnailUrl": "https://cdn.kambista.com/wp-content/uploads/2019/01/14151840/kambista.jpg",
+      "datePublished": "2019-10-28T14:12:18+00:00",
+      "dateModified": "2020-08-21T05:33:37+00:00",
+      "breadcrumb": {
+        "@id": "https://kambista.com/casa-de-cambio/#breadcrumb"
+      },
+      "inLanguage": "es",
+      "potentialAction": [
+        {
+          "@type": "ReadAction",
+          "target": ["https://kambista.com/casa-de-cambio/"]
+        }
+      ]
+    },
+    {
+      "@type": "ImageObject",
+      "inLanguage": "es",
+      "@id": "https://kambista.com/casa-de-cambio/#primaryimage",
+      "url": "https://cdn.kambista.com/wp-content/uploads/2019/01/14151840/kambista.jpg",
+      "contentUrl": "https://cdn.kambista.com/wp-content/uploads/2019/01/14151840/kambista.jpg",
+      "width": 739,
+      "height": 410
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://kambista.com/casa-de-cambio/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://kambista.com/"
+        },
+        { "@type": "ListItem", "position": 2, "name": "Nosotros" }
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://kambista.com/#website",
+      "url": "https://kambista.com/",
+      "name": "Kambista",
+      "description": "Cambia Dólares y Soles Online‎",
+      "publisher": { "@id": "https://kambista.com/#organization" },
+      "potentialAction": [
+        {
+          "@type": "SearchAction",
+          "target": {
+            "@type": "EntryPoint",
+            "urlTemplate": "https://kambista.com/?s={search_term_string}"
+          },
+          "query-input": "required name=search_term_string"
+        }
+      ],
+      "inLanguage": "es"
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://kambista.com/#organization",
+      "name": "Kambista",
+      "url": "https://kambista.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "inLanguage": "es",
+        "@id": "https://kambista.com/#/schema/logo/image/",
+        "url": "https://cdn.kambista.com/wp-content/uploads/2020/04/14151750/favicon.ico",
+        "contentUrl": "https://cdn.kambista.com/wp-content/uploads/2020/04/14151750/favicon.ico",
+        "width": 100,
+        "height": 109,
+        "caption": "Kambista"
+      },
+      "image": { "@id": "https://kambista.com/#/schema/logo/image/" }
+    }
+  ]
+}

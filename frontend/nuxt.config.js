@@ -40,7 +40,7 @@ export default defineNuxtConfig({
     },
   },
   buildModules: ["./localeRoutes"],
-  modules: ["@nuxtjs/tailwindcss", "nuxt-simple-sitemap"],
+  modules: ["@nuxtjs/tailwindcss", "nuxt-simple-sitemap", "nuxt-jsonld"],
   srcDir: "./src",
   build: {
     postcss: {

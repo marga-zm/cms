@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_shared_questions",
+  "info": {
+    "displayName": "questions",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "question": {
+      "type": "string",
+      "unique": true
+    },
+    "answer": {
+      "type": "text"
+    }
+  }
+}

@@ -1,0 +1,151 @@
+{
+	"@context": "https://schema.org",
+	"@graph": [
+		{
+			"@type": "Article",
+			"@id": "https://kambista.com/aprende/10-herramientas-digitales-para-emprendedores/#article",
+			"isPartOf": {
+				"@id": "https://kambista.com/aprende/10-herramientas-digitales-para-emprendedores/"
+			},
+			"author": {
+				"name": "MarketingKambista",
+				"@id": "https://kambista.com/#/schema/person/952b24ad6c8c3aa45f007cd10f0c09cb"
+			},
+			"headline": "Top 10 Herramientas digitales para Emprendedores",
+			"datePublished": "2022-12-12T23:25:18+00:00",
+			"dateModified": "2023-05-15T21:57:59+00:00",
+			"mainEntityOfPage": {
+				"@id": "https://kambista.com/aprende/10-herramientas-digitales-para-emprendedores/"
+			},
+			"wordCount": 1250,
+			"commentCount": 0,
+			"publisher": { "@id": "https://kambista.com/#organization" },
+			"image": {
+				"@id": "https://kambista.com/aprende/10-herramientas-digitales-para-emprendedores/#primaryimage"
+			},
+			"thumbnailUrl": "https://cdn.kambista.com/wp-content/uploads/2022/12/blog_1.jpg",
+			"articleSection": ["Aprende", "Emprendimiento"],
+			"inLanguage": "es",
+			"potentialAction": [
+				{
+					"@type": "CommentAction",
+					"name": "Comment",
+					"target": [
+						"https://kambista.com/aprende/10-herramientas-digitales-para-emprendedores/#respond"
+					]
+				}
+			]
+		},
+		{
+			"@type": "WebPage",
+			"@id": "https://kambista.com/aprende/10-herramientas-digitales-para-emprendedores/",
+			"url": "https://kambista.com/aprende/10-herramientas-digitales-para-emprendedores/",
+			"name": "Top 10 Herramientas digitales para Emprendedores - Kambista",
+			"isPartOf": { "@id": "https://kambista.com/#website" },
+			"primaryImageOfPage": {
+				"@id": "https://kambista.com/aprende/10-herramientas-digitales-para-emprendedores/#primaryimage"
+			},
+			"image": {
+				"@id": "https://kambista.com/aprende/10-herramientas-digitales-para-emprendedores/#primaryimage"
+			},
+			"thumbnailUrl": "https://cdn.kambista.com/wp-content/uploads/2022/12/blog_1.jpg",
+			"datePublished": "2022-12-12T23:25:18+00:00",
+			"dateModified": "2023-05-15T21:57:59+00:00",
+			"description": "Hoy en día encontrarás muchas herramientas digitales para emprendedores. Aquí te ayudaremos a saber cuál es la ideal para ti y tu negocio.",
+			"breadcrumb": {
+				"@id": "https://kambista.com/aprende/10-herramientas-digitales-para-emprendedores/#breadcrumb"
+			},
+			"inLanguage": "es",
+			"potentialAction": [
+				{
+					"@type": "ReadAction",
+					"target": [
+						"https://kambista.com/aprende/10-herramientas-digitales-para-emprendedores/"
+					]
+				}
+			]
+		},
+		{
+			"@type": "ImageObject",
+			"inLanguage": "es",
+			"@id": "https://kambista.com/aprende/10-herramientas-digitales-para-emprendedores/#primaryimage",
+			"url": "https://cdn.kambista.com/wp-content/uploads/2022/12/blog_1.jpg",
+			"contentUrl": "https://cdn.kambista.com/wp-content/uploads/2022/12/blog_1.jpg",
+			"width": 1200,
+			"height": 627,
+			"caption": "Herramientas digitales"
+		},
+		{
+			"@type": "BreadcrumbList",
+			"@id": "https://kambista.com/aprende/10-herramientas-digitales-para-emprendedores/#breadcrumb",
+			"itemListElement": [
+				{
+					"@type": "ListItem",
+					"position": 1,
+					"name": "Blog",
+					"item": "https://kambista.com/blog/"
+				},
+				{
+					"@type": "ListItem",
+					"position": 2,
+					"name": "Home",
+					"item": "https://kambista.com/"
+				},
+				{
+					"@type": "ListItem",
+					"position": 3,
+					"name": "Top 10 Herramientas digitales para Emprendedores"
+				}
+			]
+		},
+		{
+			"@type": "WebSite",
+			"@id": "https://kambista.com/#website",
+			"url": "https://kambista.com/",
+			"name": "Kambista",
+			"description": "Cambia Dólares y Soles Online‎",
+			"publisher": { "@id": "https://kambista.com/#organization" },
+			"potentialAction": [
+				{
+					"@type": "SearchAction",
+					"target": {
+						"@type": "EntryPoint",
+						"urlTemplate": "https://kambista.com/?s={search_term_string}"
+					},
+					"query-input": "required name=search_term_string"
+				}
+			],
+			"inLanguage": "es"
+		},
+		{
+			"@type": "Organization",
+			"@id": "https://kambista.com/#organization",
+			"name": "Kambista",
+			"url": "https://kambista.com/",
+			"logo": {
+				"@type": "ImageObject",
+				"inLanguage": "es",
+				"@id": "https://kambista.com/#/schema/logo/image/",
+				"url": "https://cdn.kambista.com/wp-content/uploads/2020/04/14151750/favicon.ico",
+				"contentUrl": "https://cdn.kambista.com/wp-content/uploads/2020/04/14151750/favicon.ico",
+				"width": 100,
+				"height": 109,
+				"caption": "Kambista"
+			},
+			"image": { "@id": "https://kambista.com/#/schema/logo/image/" }
+		},
+		{
+			"@type": "Person",
+			"@id": "https://kambista.com/#/schema/person/952b24ad6c8c3aa45f007cd10f0c09cb",
+			"name": "MarketingKambista",
+			"image": {
+				"@type": "ImageObject",
+				"inLanguage": "es",
+				"@id": "https://kambista.com/#/schema/person/image/",
+				"url": "https://secure.gravatar.com/avatar/75accdf1d01133e7537e331b94a31960?s=96&d=mm&r=g",
+				"contentUrl": "https://secure.gravatar.com/avatar/75accdf1d01133e7537e331b94a31960?s=96&d=mm&r=g",
+				"caption": "MarketingKambista"
+			}
+		}
+	]
+}

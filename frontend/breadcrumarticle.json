@@ -1,0 +1,19 @@
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "item": { "@id": "https://kambista.com/", "name": "Home" }
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "item": {
+        "@id": "https://kambista.com/finanzas/metodos-de-seguridad-al-convertir-soles-a-dolares-online/",
+        "name": "M\u00e9todos de seguridad al convertir soles a d\u00f3lares online"
+      }
+    }
+  ]
+}

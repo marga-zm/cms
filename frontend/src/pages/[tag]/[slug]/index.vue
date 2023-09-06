@@ -62,115 +62,114 @@
           </div>
         </div>
       </div>
+      <Seo v-if="seoData" :seo="seoData" />
+      <StructuredData v-if="seoData" :seo="seoData" />
     </div>
   </BaseLayout>
 </template>
 
-<script>
+<script setup>
 import BaseLayout from "@/layouts/BaseLayout";
 import { onMounted, ref, watch } from "vue";
 import { micromark } from "micromark";
 import { gfm } from "micromark-extension-gfm";
+import Seo from "@/shared/Seo.vue";
+import StructuredData from "~/shared/structuredData/structuredDataArticle.vue";
 
-export default defineComponent({
-  components: { BaseLayout },
-  setup() {
-    const { $services } = useNuxtApp();
-    const route = useRoute();
-    const dataArticle = ref({});
-    const articleHtml = ref();
-    const articleImage = ref();
-    const relatedArticles = ref({});
-    const router = useRouter();
+const { $services } = useNuxtApp();
+const route = useRoute();
+const dataArticle = ref({});
+const articleHtml = ref();
+const articleImage = ref();
+const relatedArticles = ref({});
+const seoData = ref();
 
-    const slug = route.params.slug;
+const router = useRouter();
 
-    const getInitialDataArticle = async () => {
-      try {
-        const {
-          data: { data },
-        } = await $services.customer.filterArticleBySlug(slug);
+const slug = route.params.slug;
 
-        dataArticle.value = data;
-        articleHtml.value = micromark(data?.attributes.content, {
-          extensions: [gfm({ syntax: true })],
-        });
-        articleImage.value = data?.attributes.image.data.attributes;
-        relatedArticles.value = {
-          title: data.attributes.relatedArticles?.title,
-          articles: data.attributes.relatedArticles?.articles?.data,
-        };
-      } catch (error) {
-        console.log(error);
-      }
-    };
+const getInitialDataArticle = async () => {
+  try {
+    const {
+      data: { data },
+    } = await $services.customer.filterArticleBySlug(slug);
 
-    const applyStylesToOrderedList = () => {
-      const wraper = document.getElementById("contentWrapper");
-      if (wraper) {
-        const olElements = wraper.querySelectorAll("ol");
-        olElements.forEach((olElement) => {
-          olElement.style.listStyleType = "decimal";
-          olElement.style.paddingLeft = "16px";
-          olElement.style.paddingLeft = "16px";
-        });
-      }
-    };
-
-    const applyStylesToSubtitle = () => {
-      const wraper = document.getElementById("contentWrapper");
-      if (wraper) {
-        const elements = [
-          ...wraper.querySelectorAll("h2"),
-          ...wraper.querySelectorAll("h3"),
-        ];
-        elements.forEach((element) => {
-          element.style.fontSize = "20px";
-          element.style.fontWeight = "bold";
-          element.style.margin = "8px 0px 8px 0px";
-        });
-      }
-    };
-
-    const applyStylesToParagraph = () => {
-      const wraper = document.getElementById("contentWrapper");
-      if (wraper) {
-        const elements = wraper.querySelectorAll("p");
-        elements.forEach((element) => {
-          element.style.margin = "8px 0px 8px 0px";
-        });
-      }
-    };
-
-    const handleRedirect = (path) => {
-      router.push({ path: `/${path}` });
-    };
-
-    const getImageUrl = (attributes) => {
-      return attributes.image?.data.attributes.url;
-    };
-
-    onMounted(async () => {
-      await getInitialDataArticle();
-      nextTick(() => {
-        applyStylesToOrderedList();
-        applyStylesToSubtitle();
-        applyStylesToParagraph();
-      });
+    dataArticle.value = data;
+    articleHtml.value = micromark(data?.attributes.content, {
+      extensions: [gfm({ syntax: true })],
     });
-
-    watch(getInitialDataArticle);
-
-    return {
-      dataArticle,
-      articleHtml,
-      articleImage,
-      relatedArticles,
-      getImageUrl,
-      handleRedirect,
+    articleImage.value = data?.attributes.image.data.attributes;
+    relatedArticles.value = {
+      title: data.attributes.relatedArticles?.title,
+      articles: data.attributes.relatedArticles?.articles?.data,
     };
-  },
+    seoData.value = {
+      ...data.attributes.seo,
+      typeContent: "article",
+      tag: data.attributes.tag,
+      createdAt: data.attributes.createdAt,
+      updatedAt: data.attributes.updatedAt,
+    };
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+const applyStylesToOrderedList = () => {
+  const wraper = document.getElementById("contentWrapper");
+  if (wraper) {
+    const olElements = wraper.querySelectorAll("ol");
+    olElements.forEach((olElement) => {
+      olElement.style.listStyleType = "decimal";
+      olElement.style.paddingLeft = "16px";
+      olElement.style.paddingLeft = "16px";
+    });
+  }
+};
+
+const applyStylesToSubtitle = () => {
+  const wraper = document.getElementById("contentWrapper");
+  if (wraper) {
+    const elements = [
+      ...wraper.querySelectorAll("h2"),
+      ...wraper.querySelectorAll("h3"),
+    ];
+    elements.forEach((element) => {
+      element.style.fontSize = "20px";
+      element.style.fontWeight = "bold";
+      element.style.margin = "8px 0px 8px 0px";
+    });
+  }
+};
+
+const applyStylesToParagraph = () => {
+  const wraper = document.getElementById("contentWrapper");
+  if (wraper) {
+    const elements = wraper.querySelectorAll("p");
+    elements.forEach((element) => {
+      element.style.margin = "16px 0px 16px 0px";
+    });
+  }
+};
+
+const handleRedirect = (path) => {
+  router.push({ path: `/${path}` });
+};
+
+const getImageUrl = (attributes) => {
+  return attributes.image?.data.attributes.url;
+};
+
+onMounted(async () => {
+  await getInitialDataArticle();
+  nextTick(() => {
+    applyStylesToOrderedList();
+    applyStylesToSubtitle();
+    applyStylesToParagraph();
+  });
 });
+
+watch(getInitialDataArticle);
 </script>
 
 <style scoped>

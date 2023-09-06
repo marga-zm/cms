@@ -5,7 +5,7 @@
     <img
       src="~/assets/images/logo.svg"
       alt="Kambista logo"
-      class="cursor-pointer w-48 lg:w-56"
+      class="cursor-pointer w-44 lg:w-48"
       @click="handleRedirect"
     />
     <div class="lg:hidden">
@@ -19,22 +19,22 @@
     <div class="hidden lg:block">
       <NuxtLink
         to="/nosotros"
-        class="text-gray-100 text-2xl px-4 py-3 hover:font-semibold"
+        class="text-gray-100 text-xl px-4 py-3 hover:font-semibold"
         >Nosotros</NuxtLink
       >
       <NuxtLink
         to="/blog"
-        class="text-gray-100 text-2xl px-4 py-3 hover:font-semibold"
+        class="text-gray-100 text-xl px-4 py-3 hover:font-semibold"
         >Blog</NuxtLink
       >
       <NuxtLink
         to="/ayuda"
-        class="text-gray-100 text-2xl px-4 py-3 hover:font-semibold"
+        class="text-gray-100 text-xl px-4 py-3 hover:font-semibold"
         >Ayuda</NuxtLink
       >
       <NuxtLink
         to="/login"
-        class="text-2xl bg-primary opacity-90 rounded-full p-4 hover:opacity-100"
+        class="text-xl bg-primary opacity-90 rounded-full p-4 hover:opacity-100"
         >Regístrate</NuxtLink
       >
     </div>
